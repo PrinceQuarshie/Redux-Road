@@ -61,3 +61,29 @@ const Reducer = (state = initialWagonState, action) => {
     }
   }
 };
+
+
+  //initialization
+let wagon = Reducer(undefined, {})
+console.log(wagon)
+  //day 1 actions
+wagon = Reducer(wagon, {type: 'travel', payload: 1})
+console.log(wagon)
+  //day 2 actions
+wagon = Reducer(wagon, { type: 'gather', payload: 0})
+console.log(wagon)
+
+  //river accident actions
+wagon = Reducer(wagon, { type: 'tippedWagon', payload: 0})
+console.log(wagon)
+wagon = Reducer(wagon, {type: 'buy', payload: 0})
+console.log(wagon)
+
+ //day 3 actions
+wagon = Reducer(wagon, {type: 'travel', payload: 3})
+console.log(wagon)
+
+wagon = Reducer(wagon, {type: 'theft'})
+console.log(wagon);
+
+
